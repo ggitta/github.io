@@ -10,16 +10,20 @@
   <meta name="description" content="SSM（Spring、Spring MVC和Mybatis）是什么我想也不用在赘述。许多童鞋现在开始学习这个流行的框架来进行Java开发，想要寻找一个最简单的SSM框架搭建方法，这里我不说什么废话，直接上手开始搭建，代码部分都做了详细的注释，可以快速上手！本文使用的是注解，我希望在搭建SSM框架之前最好对基础知识有所掌握，能够知道每个注解的作用以及配置方式，可以节省不少时间，我希望还不知道什么是注">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IDEA搭建SSM框架（SSM简单整合）">
-<meta property="og:url" content="http://yoursite.com/2020/01/15/IDEA%E6%90%AD%E5%BB%BASSM%E6%A1%86%E6%9E%B6%EF%BC%88SSM%E7%AE%80%E5%8D%95%E6%95%B4%E5%90%88%EF%BC%89/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/01/15/ssm_by_idea/index.html">
 <meta property="og:site_name" content="JAVAFENG">
 <meta property="og:description" content="SSM（Spring、Spring MVC和Mybatis）是什么我想也不用在赘述。许多童鞋现在开始学习这个流行的框架来进行Java开发，想要寻找一个最简单的SSM框架搭建方法，这里我不说什么废话，直接上手开始搭建，代码部分都做了详细的注释，可以快速上手！本文使用的是注解，我希望在搭建SSM框架之前最好对基础知识有所掌握，能够知道每个注解的作用以及配置方式，可以节省不少时间，我希望还不知道什么是注">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/media/img/ef39bb0a.PNG">
 <meta property="og:image" content="http://yoursite.com/media/img/a7ec20d8.PNG">
 <meta property="article:published_time" content="2020-01-15T08:49:50.000Z">
-<meta property="article:modified_time" content="2020-01-15T09:37:42.743Z">
+<meta property="article:modified_time" content="2020-01-15T09:46:52.007Z">
 <meta property="article:author" content="JAVAFENG">
-<meta property="article:tag" content="Java,SSM,Mybatis,Spring,Spring MVC">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="SSM">
+<meta property="article:tag" content="Mybatis">
+<meta property="article:tag" content="Spring">
+<meta property="article:tag" content="Spring MVC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/media/img/ef39bb0a.PNG">
   
@@ -70,12 +74,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-IDEA搭建SSM框架（SSM简单整合）" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ssm_by_idea" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/01/15/IDEA%E6%90%AD%E5%BB%BASSM%E6%A1%86%E6%9E%B6%EF%BC%88SSM%E7%AE%80%E5%8D%95%E6%95%B4%E5%90%88%EF%BC%89/" class="article-date">
+    <a href="/2020/01/15/ssm_by_idea/" class="article-date">
   <time datetime="2020-01-15T08:49:50.000Z" itemprop="datePublished">2020-01-15</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -152,10 +160,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/15/IDEA%E6%90%AD%E5%BB%BASSM%E6%A1%86%E6%9E%B6%EF%BC%88SSM%E7%AE%80%E5%8D%95%E6%95%B4%E5%90%88%EF%BC%89/" data-id="ck5f43ock000284tufj6n5s3b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/01/15/ssm_by_idea/" data-id="ck5f4fgd600021wqc77x9cpwc" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-SSM-Mybatis-Spring-Spring-MVC/" rel="tag">Java,SSM,Mybatis,Spring,Spring MVC</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSM/" rel="tag">SSM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-MVC/" rel="tag">Spring MVC</a></li></ul>
 
     </footer>
   </div>
@@ -183,13 +191,20 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li></ul>
+    </div>
+  </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-SSM-Mybatis-Spring-Spring-MVC/" rel="tag">Java,SSM,Mybatis,Spring,Spring MVC</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSM/" rel="tag">SSM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-MVC/" rel="tag">Spring MVC</a></li></ul>
     </div>
   </div>
 
@@ -199,7 +214,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Java-SSM-Mybatis-Spring-Spring-MVC/" style="font-size: 10px;">Java,SSM,Mybatis,Spring,Spring MVC</a>
+      <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Mybatis/" style="font-size: 10px;">Mybatis</a> <a href="/tags/SSM/" style="font-size: 10px;">SSM</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/Spring-MVC/" style="font-size: 10px;">Spring MVC</a>
     </div>
   </div>
 
@@ -229,7 +244,7 @@
           </li>
         
           <li>
-            <a href="/2020/01/15/IDEA%E6%90%AD%E5%BB%BASSM%E6%A1%86%E6%9E%B6%EF%BC%88SSM%E7%AE%80%E5%8D%95%E6%95%B4%E5%90%88%EF%BC%89/">IDEA搭建SSM框架（SSM简单整合）</a>
+            <a href="/2020/01/15/ssm_by_idea/">IDEA搭建SSM框架（SSM简单整合）</a>
           </li>
         
       </ul>
