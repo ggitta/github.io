@@ -1,0 +1,24 @@
+language: node_js
+
+addons:
+  apt:
+    packages:
+    - time
+
+cache:
+  npm: true
+
+node_js:
+  - "8"
+  - "10"
+  - "12"
+  - "13"
+
+script:
+  - npm run eslint
+  - npm run test-cov
+  - ./test/benchmark.sh
+
+after_script:
+  - npm install coveralls
+  - nyc report --reporter=text-lcov | coveralls
