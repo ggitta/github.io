@@ -1,24 +1,18 @@
+sudo: false
 language: node_js
-
-addons:
-  apt:
-    packages:
-    - time
-
-cache:
-  npm: true
-
 node_js:
-  - "8"
-  - "10"
-  - "12"
-  - "13"
-
+  - 10 # use nodejs v10 LTS
+cache: npm
+branches:
+  only:
+    - master # build master branch only
 script:
-  - npm run eslint
-  - npm run test-cov
-  - ./test/benchmark.sh
-
-after_script:
-  - npm install coveralls
-  - nyc report --reporter=text-lcov | coveralls
+  - hexo generate # generate static files
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: public
