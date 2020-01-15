@@ -1,7 +1,13 @@
 ---
 title: IDEA搭建SSM框架（SSM简单整合）
 date: 2020-01-15 16:49:50
-tags: Java,SSM,Mybatis,Spring,Spring MVC
+tags: 
+  - Java
+  - SSM
+  - Mybatis
+  - Spring
+  - Spring MVC
+categories: Java
 ---
 SSM（Spring、Spring MVC和Mybatis）是什么我想也不用在赘述。
 许多童鞋现在开始学习这个流行的框架来进行Java开发，想要寻找一个最简单的SSM框架搭建方法，这里我不说什么废话，直接上手开始搭建，代码部分都做了详细的注释，可以快速上手！
